@@ -15,9 +15,9 @@ use App\Http\Controllers\Admin\AnimalController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Route::resource('admin/clientes', ClienteController::class);
@@ -25,4 +25,4 @@ Route::resource('admin/pets', AnimalController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
